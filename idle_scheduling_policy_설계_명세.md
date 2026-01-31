@@ -343,7 +343,6 @@ D -->|state transition<br>when<br>cleanup complete|A
 | burst_en | output | Execution<br>Unit<br>Activation |
 | idle_counter |reg | Idle<br>Accumulative<br>Counter |
 | state | reg | FSM |
-```
 
 ---
 
@@ -950,7 +949,6 @@ W2: `W1` 주기 종료 시점에만 갱신.
 - W1과 W2는 **단일 누적 카운터 구조**이다.
 - 슬롯, shift, 벨트 방식의 저장 구조는 **존재하지 않는다**.
 - 누적 규칙은 다음으로 고정된다:
-
 ```
 W1_CNT_next = W1_CNT_prev + W0_VALUE
 W2_CNT_next = W2_CNT_prev + W1_CNT
@@ -1069,6 +1067,10 @@ W2_CNT_next = W2_CNT_prev + W1_CNT
 
 본 선언은 보안 기능을 배제하기 위한 주장이 아니라,  
 **설계 책임 경계와 검증 범위를 명확히 하기 위한 관리적 명세**이다.
+
+
+
+.
 
 
 
